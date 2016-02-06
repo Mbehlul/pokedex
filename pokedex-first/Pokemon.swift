@@ -124,10 +124,10 @@ class Pokemon {
                     self._defense = "\(defense)"
                 }
                 
-                print(self._weight)
-                print(self._height)
-                print(self._baseAttack)
-                print(self._defense)
+                print("weight: " + self._weight)
+                print("height: " + self._height)
+                print("attack: " + self._baseAttack)
+                print("defense: " + self._defense)
                 
                 if let types = dict["types"] as? [Dictionary<String, String>] where types.count > 0 {
                     
@@ -147,7 +147,7 @@ class Pokemon {
                     self._type = ""
                 }
                 
-                print(self._type)
+                print("type: " + self._type)
                 
                 if let descArr = dict["descriptions"] as? [Dictionary<String, String>] where descArr.count > 0 {
                     
@@ -160,7 +160,7 @@ class Pokemon {
                                 
                                 if let description = descDict["description"] as? String {
                                     self._description = description
-                                    print(self._description)
+                                    print("description: " + self._description)
                                 }
                             }
                             
@@ -190,11 +190,13 @@ class Pokemon {
                             
                             if let lvl = evolutions[0]["level"] as? Int {
                                 self._nextEvolutionLevel = "\(lvl)"
+                            } else {
+                                self._nextEvolutionLevel = ""
                             }
                             
-                            print(self._nextEvolutionId)
-                            print(self._nextEvoTxt)
-                            print(self._nextEvolutionLevel)
+                            print("next evo id: " + self._nextEvolutionId)
+                            print("next evo txt: " + self._nextEvoTxt)
+                            print("next evo lvl: " + self._nextEvolutionLevel)
                             
                         }
                         

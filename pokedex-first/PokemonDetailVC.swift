@@ -58,6 +58,7 @@ class PokemonDetailVC: UIViewController {
             
             if pokemon.nextEvolutionLevel != "" {
                 str += " - Lvl \(pokemon.nextEvolutionLevel)"
+                nextEvoLbl.text = str
             }
         }
         
