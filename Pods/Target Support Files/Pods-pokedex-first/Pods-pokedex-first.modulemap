@@ -1,0 +1,6 @@
+framework module Pods_pokedex_first {
+  umbrella header "Pods-pokedex-first-umbrella.h"
+
+  export *
+  module * { export * }
+}
